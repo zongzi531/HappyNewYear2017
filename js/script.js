@@ -1,6 +1,10 @@
 var music = document.getElementById("music");
 var audio = document.getElementsByTagName("audio")[0];
 
+ document.addEventListener("WeixinJSBridgeReady", function () { 
+       audio.play();
+   }, false); 
+
 music.addEventListener("touchstart",function() {
 	if (audio.paused) {
 		audio.play();

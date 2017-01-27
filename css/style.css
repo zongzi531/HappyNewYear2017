@@ -12,17 +12,16 @@ body {
 	height: 100%;
 }
 
+p {
+	font-size: 11px;
+}
+
 /*  music  */
 #music {
 	position: fixed;
 	top: 2.64vh;
 	right: 4.68vw;
 	z-index: 5;
-	width: 8vw;
-	height: 8vw;
-}
-
-#music > img {
 	width: 8vw;
 	height: 8vw;
 }
