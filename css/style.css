@@ -1,0 +1,185 @@
+/*  all tag  */
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 1.5625rem;
+	font-family: "Microsoft Yahei";
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/*  music  */
+#music {
+	position: fixed;
+	top: 2.64vh;
+	right: 4.68vw;
+	z-index: 5;
+	width: 8vw;
+	height: 8vw;
+}
+
+#music > img {
+	width: 8vw;
+	height: 8vw;
+}
+
+/*  page background  */
+.page {
+	height: 100%;
+	position: relative;
+}
+
+/*  page1  */
+.page {
+	background: #fada9d;
+}
+
+#page1 > .p1_chicken {
+	position: absolute;
+	z-index: 2;
+	width: 45.06vw;
+	left: 26.4666vw;
+	top: 30.4872vh;
+}
+
+#page1 > .p1_dot {
+	position: absolute;
+	z-index: 1;
+	left: 13.8vw;
+	top: 11.4962vh;
+	width: 70.67vw;
+}
+
+#page1 > .p1_title {
+	position: absolute;
+	z-index: 2;
+	left: 10.4vw;
+	top: 14.3958vh;
+}
+
+#page1 > .p1_title > .t_hny {
+	position: absolute;
+	z-index: 1;
+	width: 79.2vw;
+}
+
+#page1 > .p1_title > .t_top {
+	position: absolute;
+	z-index: 0;
+	left: 17.6vw;
+	top: -3.8980vh;
+	width: 45.33vw;
+}
+
+#page1 > .p1_card {
+	position: absolute;
+	z-index: 0;
+	width: 93.07vw;
+	height: 89.2vh;
+	background: #e43a2b;
+	box-shadow: #000 0px 0px 9px;
+	-webkit-box-shadow: #000 0px 0px 9px;
+	border-radius: 4vw;
+	left: 3.47vw;
+	top: 2.6986vh;
+}
+
+#page1 > .p1_gxfc {
+	position: absolute;
+	z-index: 2;
+	width: 10.14vw;
+	top: 83.26vh;
+	right: 7vw;
+}
+
+#page1 > .p1_cloud {
+	position: absolute;
+	z-index: 2;
+	width: 22.4vw;
+	top: 10vh;
+	left: 5vw;
+}
+
+#page1 .p1_cloud2 {
+	width: 30vw;
+	top: 83vh;
+	opacity: .3;
+}
+
+#page1 > .p1_2017 {
+	position: absolute;
+	z-index: 2;
+	width: 12vw;
+	top: 28.5vh;
+	left: 67vw;
+}
+
+#page1 > .p1_note {
+	position: absolute;
+	z-index: 1;
+	width: 18.67vw;
+	top: 27vh;
+	left: 64vw;
+}
+
+#page1 > .p1_jjzc {
+	position: absolute;
+	z-index: 2;
+	width: 10.67vw;
+	top: 42vh;
+	left: 12vw;
+}
+
+#page1 > .p1_author {
+	position: absolute;
+	z-index: 2;
+	bottom: 1.5vh;
+	left: 5vw;
+}
+
+#page1 > .p1_boom {
+	position: absolute;
+	z-index: 1;
+}
+
+#page1 .boom1 {
+	width: 26.66vw;
+	top: 10vh;
+	left: 68vw;
+}
+
+#page1 .boom2 {
+	width: 18.4vw;
+	top: 47vh;
+	left: 75vw;
+}
+
+#page1 .boom3 {
+	width: 18.4vw;
+	top: 56.5vh;
+	left: 8vw;
+}
+
+#page1 > .p1_logo {
+	position: absolute;
+	z-index: 2;
+	width: 6.06vw;
+	bottom: 2.5vh;
+	right: 8vw;
+}
+
+#page1 > .p1_logo_border {
+	position: absolute;
+	z-index: 2;
+	width: 12.33vw;
+	bottom: 1vh;
+	right: 5vw;
+}
+
+/*  page2  */
+
+/*  page3  */
