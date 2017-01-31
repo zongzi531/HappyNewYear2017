@@ -39,25 +39,6 @@ p {
 }
 
 
-/* page drop down or up */
-.page_drop_down_this {
-	animation: page_drop_down_this .5s ease-in forwards;
-	-webkit-animation: page_drop_down_this .5s ease-in forwards;
-}
-.page_drop_down {
-	animation: page_drop_down .5s ease-in forwards;
-	-webkit-animation: page_drop_down .5s ease-in forwards;
-}
-.page_drop_up_this {
-	animation: page_drop_up_this .5s ease-in forwards;
-	-webkit-animation: page_drop_up_this .5s ease-in forwards;
-}
-.page_drop_up {
-	animation: page_drop_up .5s ease-in forwards;
-	-webkit-animation: page_drop_up .5s ease-in forwards;
-}
-
-
 /*  page background  */
 .page {
 	height: 100%;
@@ -69,23 +50,34 @@ p {
 .page img {
 	position: absolute;
 }
-.show {
-	display: block;
+#loading_page {
+	z-index: 6;
 }
-.hide {
+#page1 {
+	z-index: 2;
+}
+#page2 {
+	z-index: 1;
+}
+#page3 {
+	z-index: 0;
+}
+#page_frame1,
+#page_frame2,
+#page_frame3 {
+	position: relative;
 	display: none;
 }
+/*  scroll animation  */
+.page_scroll {
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+
 
 /*  loading page  */
 #loading_page {
 	background: #fff;
-	z-index: 6;
-	transition: all 1s linear;
-	-webkit-transition: all 1s linear;
-	opacity: 1;
-}
-.loading_done {
-	opacity: 0;
 }
 #loading_page .loading {
 	background: url(../img/p0_0.png) no-repeat center center;
@@ -105,7 +97,7 @@ p {
 #page1 {
 	background: #fada9d;
 }
-#page1 > .p1_chicken {
+#page1 > #page_frame1 > .p1_chicken {
 	z-index: 2;
 	width: 45.06vw;
 	left: 26.4666vw;
@@ -113,7 +105,7 @@ p {
 	animation: fadein_normal 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page1 > .p1_dot {
+#page1 > #page_frame1 > .p1_dot {
 	z-index: 1;
 	left: 13.8vw;
 	top: 11.4962vh;
@@ -121,19 +113,19 @@ p {
 	animation: fadein_normal 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page1 > .p1_title {
+#page1 > #page_frame1 > .p1_title {
 	z-index: 2;
 	left: 10.4vw;
 	top: 14.3958vh;
 }
-#page1 > .p1_title > .t_hny {
+#page1 > #page_frame1 > .p1_title > .t_hny {
 	z-index: 1;
 	width: 79.2vw;
 	opacity: 0;
 	animation: fadein_normal 1000ms ease 1000ms both running;
 	-webkit-animation: fadein_normal 1000ms ease 1000ms both running;
 }
-#page1 > .p1_title > .t_top {
+#page1 > #page_frame1 > .p1_title > .t_top {
 	z-index: 0;
 	left: 17.6vw;
 	top: -3.8980vh;
@@ -141,7 +133,7 @@ p {
 	animation: slide_up 1000ms ease 1200ms both running;
 	-webkit-animation: slide_up 1000ms ease 1200ms both running;
 }
-#page1 > .p1_card {
+#page1 > #page_frame1 > .p1_card {
 	z-index: 0;
 	width: 93.07vw;
 	height: 89.2vh;
@@ -168,7 +160,7 @@ p {
 	animation: card_right 1000ms ease 600ms both running;
 	-webkit-animation: card_right 1000ms ease 600ms both running;
 }
-#page1 > .p1_gxfc {
+#page1 > #page_frame1 > .p1_gxfc {
 	z-index: 2;
 	width: 10.14vw;
 	top: 83.26vh;
@@ -176,7 +168,7 @@ p {
 	animation: fadein_normal 2400ms ease 1200ms both running;
 	-webkit-animation: fadein_normal 2400ms ease 1200ms both running;
 }
-#page1 > .p1_cloud {
+#page1 > #page_frame1 > .p1_cloud {
 	z-index: 2;
 	width: 22.4vw;
 	top: 10vh;
@@ -192,7 +184,7 @@ p {
 	animation: fadein_normal_opacity_half 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal_opacity_half 1000ms ease 600ms both running;
 }
-#page1 > .p1_scloud {
+#page1 > #page_frame1 > .p1_scloud {
 	z-index: 1;
 }
 #page1 .p1_scloud1 {
@@ -209,7 +201,7 @@ p {
 	animation: fadein_normal_opacity_half 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal_opacity_half 1000ms ease 600ms both running;
 }
-#page1 > .p1_2017 {
+#page1 > #page_frame1 > .p1_2017 {
 	z-index: 2;
 	width: 12vw;
 	top: 28.5vh;
@@ -217,7 +209,7 @@ p {
 	animation: slide_up 1600ms ease 1300ms both running;
 	-webkit-animation: slide_up 1600ms ease 1300ms both running;
 }
-#page1 > .p1_note {
+#page1 > #page_frame1 > .p1_note {
 	z-index: 1;
 	width: 18.67vw;
 	top: 27vh;
@@ -225,7 +217,7 @@ p {
 	animation: slide_up 1500ms ease 1400ms both running;
 	-webkit-animation: slide_up 1500ms ease 1400ms both running;
 }
-#page1 > .p1_jjzc {
+#page1 > #page_frame1 > .p1_jjzc {
 	z-index: 2;
 	width: 10.67vw;
 	height: 22.18vh;
@@ -234,7 +226,7 @@ p {
 	animation: flip_in_y 1000ms ease 1900ms both running;
 	-webkit-animation: flip_in_y 1000ms ease 1900ms both running;
 }
-#page1 > .p1_author {
+#page1 > #page_frame1 > .p1_author {
 	z-index: 2;
 	bottom: 1.5vh;
 	left: 5vw;
@@ -242,7 +234,7 @@ p {
 	animation: fadein_normal_author 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal_author 1000ms ease 600ms both running;
 }
-#page1 > .p1_boom {
+#page1 > #page_frame1 > .p1_boom {
 	z-index: 1;
 }
 #page1 .boom1 {
@@ -266,7 +258,7 @@ p {
 	animation: rotate_in 3100ms ease 1900ms both running;
 	-webkit-animation: rotate_in 3100ms ease 1900ms both running;
 }
-#page1 > .p1_logo {
+#page1 > #page_frame1 > .p1_logo {
 	z-index: 2;
 	width: 6.06vw;
 	bottom: 2.5vh;
@@ -274,7 +266,7 @@ p {
 	animation: fadein_normal 1000ms ease 600ms both running;
 	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page1 > .p1_logo_border {
+#page1 > #page_frame1 > .p1_logo_border {
 	z-index: 2;
 	width: 12.33vw;
 	bottom: 1vh;
@@ -289,88 +281,114 @@ p {
 #page2 {
 	background: #fbdecc;
 }
-#page2 > .bg {
+#page2 > #page_frame2 > .bg {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	background: url(../img/p2_bg.png) ;
 	background-size: 100%;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .bg2 {
+#page2 > #page_frame2 > .bg2 {
 	width: 100%;
 	z-index: 0;
 	background: #fada9d;
 	height: 35vh;
 	bottom: 0;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .p2_flower {
+#page2 > #page_frame2 > .p2_flower {
 	z-index: 1;
 	top: -8.09vh;
 	left: -13.33vw;
 	width: 44.26vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .p2_cloud {
+#page2 > #page_frame2 > .p2_cloud {
 	z-index: 1;
 	top: 0;
 	left: 33.33vw;
 	width: 100vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .p2_mountain {
+#page2 > #page_frame2 > .p2_mountain {
 	z-index: 1;
 	bottom: 0;
 	margin-left: 10vw;
 	width: 100%;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .p2_chicken {
+#page2 > #page_frame2 > .p2_chicken {
 	z-index: 2;
 	width: 30.13vw;
 	bottom: 25.7376vh;
 	left: 50%;
 	margin-left: -3.07vw;
+	animation: fade_in_up 1000ms ease 600ms both running;
+	-webkit-animation: fade_in_up 1000ms ease 600ms both running;
 }
-#page2 > .p2_sun {
+#page2 > #page_frame2 > .p2_sun {
 	z-index: 0;
 	bottom: 14.7376vh;
 	width: 72.26vw;
 	left: 50%;
 	margin-left: -26vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page2 > .p2_water {
+#page2 > #page_frame2 > .p2_water {
 	z-index: 2;
 	width: 100%;
 	bottom: 0;
+	animation: fade_in_up 1000ms ease 600ms both running;
+	-webkit-animation: fade_in_up 1000ms ease 600ms both running;
 }
-#page2 > .p2_boom {
+#page2 > #page_frame2 > .p2_boom {
 	z-index: 1;
 	bottom: 26.7376vh;
 	left: 50%;
 	margin-left: -7.07vw;
 	width: 33.86vw;
+	animation: rotate_in 2400ms ease 600ms both running;
+	-webkit-animation: rotate_in 2400ms ease 600ms both running;
 }
-#page2 > .p2_2017 {
+#page2 > #page_frame2 > .p2_2017 {
 	z-index: 1;
-	width: 32.2vw;
-	right: 8vw;
-	top: 15vh;
+	width: 75.2vw;
+	right: 17vw;
+	top: 20vh;
+	animation: fadein_normal 2200ms ease 1700ms both running;
+	-webkit-animation: fadein_normal 2200ms ease 1700ms both running;
 }
-#page2 > .p2_xnkl {
+#page2 > #page_frame2 > .p2_xnkl {
 	z-index: 1;
 	right: 5vw;
-	width: 40.26vw;
-	top: 36vh;
+	width: 51.26vw;
+	top: 38vh;
+	animation: fadein_normal 2800ms ease 1500ms both running;
+	-webkit-animation: fadein_normal 2800ms ease 1500ms both running;
 }
-#page2 > .p2_scloud {
+#page2 > #page_frame2 > .p2_scloud {
 	z-index: 2;
 }
 #page2 .scloud1 {
 	width: 34.13vw;
 	left: 5vw;
 	top: 62vh;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
 #page2 .scloud2 {
 	width: 28.26vw;
 	right: 11vw;
 	top: 47vh;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
 
 /*  page3  */
@@ -378,18 +396,22 @@ p {
 #page3 {
 	background: #f55747;
 }
-#page3 > .bg {
+#page3 > #page_frame3 > .bg {
 	background: url(../img/p2_bg.png);
 	background-size: 100%;
 	width: 100%;
 	height: 100%;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_water {
+#page3 > #page_frame3 > .p3_water {
 	z-index: 0;
 	width: 100%;
 	bottom: 0;
+	animation: fade_in_up 1000ms ease 600ms both running;
+	-webkit-animation: fade_in_up 1000ms ease 600ms both running;
 }
-#page3 > .p3_box {
+#page3 > #page_frame3 > .p3_box {
 	z-index: 1;
 	width: 66.13vw;
 	height: 78.41vh;
@@ -401,42 +423,54 @@ p {
 	border-radius: 10.4vw;
 	margin-left: -33.06vw;
 	margin-top: -38.20vh;
+	animation: box_show 1800ms ease 600ms both running;
+	-webkit-animation: box_show 1800ms ease 600ms both running;
 }
-#page3 > .p3_happy {
+#page3 > #page_frame3 > .p3_happy {
 	z-index: 2;
 	width: 37.86vw;
 	top: 13vh;
 	left: 50%;
 	margin-left: -18.93vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_chinese {
+#page3 > #page_frame3 > .p3_chinese {
 	z-index: 2;
 	width: 38.66vw;
 	top: 17vh;
 	left: 50%;
 	margin-left: -19.33vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_line {
+#page3 > #page_frame3 > .p3_line {
 	z-index: 2;
 	width: 41.6vw;
 	top: 24vh;
 	left: 50%;
 	margin-left: -20.8vw;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_ny {
+#page3 > #page_frame3 > .p3_ny {
 	z-index: 2;
 	width: 38.4vw;
 	left: 50%;
 	margin-left: -19.2vw;
 	top: 26vh;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_jxry {
+#page3 > #page_frame3 > .p3_jxry {
 	z-index: 2;
 	width: 32.26vw;
 	right: 20vw;
 	top: 67vh;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_chicken {
+#page3 > #page_frame3 > .p3_chicken {
 	z-index: 2;
 	width: 53.8vw;
 	transform: rotate(24deg);
@@ -444,24 +478,74 @@ p {
 	top: 65vh;
 	left: -7vw;
 	overflow: hidden;
+	animation: fadein_normal 1000ms ease 600ms both running;
+	-webkit-animation: fadein_normal 1000ms ease 600ms both running;
 }
-#page3 > .p3_wish_title {
+#page3 > #page_frame3 > .p3_wish_title {
 	z-index: 2;
 	width: 60vw;
 	left: 50%;
 	margin-left: -30vw;
 	top: 32vh;
+	animation: fade_in 1000ms ease 600ms both running;
+	-webkit-animation: fade_in 1000ms ease 600ms both running;
 }
-#page3 > .p3_wish {
+#page3 > #page_frame3 > .p3_wish {
 	z-index: 2;
 	width: 20vw;
 	left: 50%;
 	margin-left: -12vw;
 	top: 45vh;
+	animation: fade_in 1000ms ease 600ms both running;
+	-webkit-animation: fade_in 1000ms ease 600ms both running;
 }
 
 
 /* animation */
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+		transform: scale(0) translateZ(0);
+		-webkit-transform: scale(0) translateZ(0);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.1) translateZ(0);
+		-webkit-transform: scale(1.1) translateZ(0);
+	}
+	80% {
+		opacity: 1;
+		transform: scale(0.9) translateZ(0);
+		-webkit-transform: scale(0.9) translateZ(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateZ(0);
+		-webkit-transform: scale(1) translateZ(0);
+	}
+}
+@-webkit-keyframes fade_in {
+	0% {
+		opacity: 0;
+		transform: scale(0) translateZ(0);
+		-webkit-transform: scale(0) translateZ(0);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.1) translateZ(0);
+		-webkit-transform: scale(1.1) translateZ(0);
+	}
+	80% {
+		opacity: 1;
+		transform: scale(0.9) translateZ(0);
+		-webkit-transform: scale(0.9) translateZ(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateZ(0);
+		-webkit-transform: scale(1) translateZ(0);
+	}
+}
 @keyframes fadein_normal {
 	0% {
 		opacity: 0;
@@ -572,86 +656,6 @@ p {
 	100% {
 		transform: translateY(-10px);
 		-webkit-transform: translateY(-10px);
-	}
-}
-@keyframes page_drop_down_this {
-	0% {
-		opacity: 1;
-		margin-top: 0;
-	}
-	100% {
-		opacity: 0;
-		margin-top: -100vh;
-	}
-}
-@-webkit-keyframes page_drop_down_this {
-	0% {
-		opacity: 1;
-		margin-top: 0;
-	}
-	100% {
-		opacity: 0;
-		margin-top: -100vh;
-	}
-}
-@keyframes page_drop_down {
-	0% {
-		opacity: 0;
-		margin-top: 100vh;
-	}
-	100% {
-		opacity: 1;
-		margin-top: 0;
-	}
-}
-@-webkit-keyframes page_drop_down {
-	0% {
-		opacity: 0;
-		margin-top: 100vh;
-	}
-	100% {
-		opacity: 1;
-		margin-top: 0;
-	}
-}
-@keyframes page_drop_up_this {
-	0% {
-		opacity: 1;
-		margin-top: 0;
-	}
-	100% {
-		opacity: 0;
-		margin-top: 100vh;
-	}
-}
-@-webkit-keyframes page_drop_up_this {
-	0% {
-		opacity: 1;
-		margin-top: 0;
-	}
-	100% {
-		opacity: 0;
-		margin-top: 100vh;
-	}
-}
-@keyframes page_drop_up {
-	0% {
-		opacity: 0;
-		margin-top: -100vh;
-	}
-	100% {
-		opacity: 1;
-		margin-top: 0;
-	}
-}
-@-webkit-keyframes page_drop_up {
-	0% {
-		opacity: 0;
-		margin-top: -100vh;
-	}
-	100% {
-		opacity: 1;
-		margin-top: 0;
 	}
 }
 @keyframes page_loading {
@@ -881,5 +885,77 @@ p {
 		opacity: 1;
 		transform: perspective(400px) rotateX(0deg);
 		-webkit-transform: perspective(400px) rotateX(0deg);
+	}
+}
+@keyframes fade_in_up {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+}
+@-webkit-keyframes fade_in_up {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+		-webkit-transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes box_show {
+	0% {
+		opacity: 0;
+		transform: scale(1.8) translateZ(0);
+		-webkit-transform: scale(1.8) translateZ(0);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(0.95) translateZ(0);
+		-webkit-transform: scale(0.95) translateZ(0);
+	}
+	80% {
+		transform: scale(1.05) translateZ(0);
+		-webkit-transform: scale(1.05) translateZ(0);
+	}
+	90% {
+		transform: scale(0.98) translateZ(0);
+		-webkit-transform: scale(0.98) translateZ(0);
+	}
+	100% {
+		transform: scale(1) translateZ(0);
+		-webkit-transform: scale(1) translateZ(0);
+	}
+}
+@-webkit-keyframes box_show {
+	0% {
+		opacity: 0;
+		transform: scale(1.8) translateZ(0);
+		-webkit-transform: scale(1.8) translateZ(0);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(0.95) translateZ(0);
+		-webkit-transform: scale(0.95) translateZ(0);
+	}
+	80% {
+		transform: scale(1.05) translateZ(0);
+		-webkit-transform: scale(1.05) translateZ(0);
+	}
+	90% {
+		transform: scale(0.98) translateZ(0);
+		-webkit-transform: scale(0.98) translateZ(0);
+	}
+	100% {
+		transform: scale(1) translateZ(0);
+		-webkit-transform: scale(1) translateZ(0);
 	}
 }
