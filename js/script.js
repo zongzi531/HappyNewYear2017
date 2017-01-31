@@ -18,7 +18,6 @@ setTimeout(function(){
 },2000);
 
 /*  music  */
- document.addEventListener("WeixinJSBridgeReady", function () { 
 document.addEventListener("WeixinJSBridgeReady", function () { 
        bgaudio.play();
    }, false); 
