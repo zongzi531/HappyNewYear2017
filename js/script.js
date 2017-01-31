@@ -19,12 +19,8 @@ setTimeout(function(){
 
 /*  music  */
  document.addEventListener("WeixinJSBridgeReady", function () { 
-       setTimeout(function(){
-			pageloading.setAttribute("class", "page loading_done");
-			pageloading.setAttribute("class", "page hide");
-			page1.setAttribute("class", "page show");
-			bgaudio.play();
-		},2000);
+document.addEventListener("WeixinJSBridgeReady", function () { 
+       bgaudio.play();
    }, false); 
 
 bgmusic.addEventListener("touchstart",function() {
