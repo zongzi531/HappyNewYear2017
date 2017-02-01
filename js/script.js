@@ -121,12 +121,14 @@ page3.addEventListener("touchend",function(event){
 	event.preventDefault();
 	if (parseInt(page3.style.top) > 0) {
 		page2.setAttribute("class","page page_scroll");
+		page3.setAttribute("class","page page_scroll");
 		page2.style.top = 0;
 		page3.style.top = window.innerHeight + "px";
-		page_frame3.style.display = "none";
 		setTimeout(function(){
+			page_frame3.style.display = "none";
 			page_frame2.style.display = "block";
 			page2.setAttribute("class","page");
+			page3.setAttribute("class","page");
 		},1000);
 	}
 },false);
